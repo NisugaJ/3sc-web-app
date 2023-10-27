@@ -14,9 +14,11 @@ export default {
       'green-secondary': '#00ED71',
       'pink-secondary': '#F402561A',
 
-      'gray-dark': '#5B5B5B',
-      'gray': '#C3C3C3',
-      'gray-light': '#F8F8F8',
+      'gray':{
+        'dark': '#5B5B5B',
+        'DEFAULT': '#C3C3C3',
+        'light': '#F8F8F8',
+      },
 
       'gradient-primary': 'linear-gradient(81deg, #A0FF1F 13.17%, #00ED71 86.83%)',
 
