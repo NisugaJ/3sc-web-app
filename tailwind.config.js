@@ -1,3 +1,5 @@
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -32,13 +34,9 @@ export default {
       serif: ['Merriweather', 'serif'],
     },
     extend: {
-      spacing: {
-        '8xl': '96rem',
-        '9xl': '128rem',
+      fontFamily:{
+        sans:['Poppins', defaultTheme.fontFamily]
       },
-      borderRadius: {
-        '4xl': '2rem',
-      }
     }
   },
 }
