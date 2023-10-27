@@ -30,10 +30,6 @@ export default {
       'error':'#F40256',
       'error-light': '#F4025626' // last 2 numbers are for 20% opacity (https://www.jmiron.com/percent-to-hex-converter)
     },
-    fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-    },
     extend: {
       fontFamily:{
         sans:['Anonymous Pro', defaultTheme.fontFamily]
