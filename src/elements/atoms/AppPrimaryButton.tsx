@@ -1,8 +1,9 @@
 import AppButtonProps from "../../ts-types/AppButton"
+import AppButton from "./AppButton"
 
 const AppPrimaryButton = (props: AppButtonProps) => {
     return (
-        <button className="bg-black-primary w-auto text-white-primary px-4 py-2">{props.children}</button>
+        <AppButton className="bg-black-primary text-white-primary">{props.children}</AppButton>
     )
 }
 
