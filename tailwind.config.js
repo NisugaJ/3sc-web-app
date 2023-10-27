@@ -36,7 +36,7 @@ export default {
     },
     extend: {
       fontFamily:{
-        sans:['Poppins', defaultTheme.fontFamily]
+        sans:['Anonymous Pro', defaultTheme.fontFamily]
       },
     }
   },
