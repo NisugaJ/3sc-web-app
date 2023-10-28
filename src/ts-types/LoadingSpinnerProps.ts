@@ -1,7 +1,7 @@
 import Props from "./Props";
 
 interface LoadingSpinnerProps extends Props {
-  color: string;
+  color?: string;
 } 
 
 export default LoadingSpinnerProps
