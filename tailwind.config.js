@@ -34,6 +34,9 @@ export default {
       fontFamily:{
         sans:['Anonymous Pro', defaultTheme.fontFamily]
       },
+      animation: {
+        'spin-slow': 'spin 2s linear infinite',
+      }
     }
   },
 
