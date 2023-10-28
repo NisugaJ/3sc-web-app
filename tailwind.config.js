@@ -13,7 +13,8 @@ export default {
     colors: colors,
     extend: {
       fontFamily:{
-        sans:['Anonymous Pro', defaultTheme.fontFamily]
+        sans:['Poppins', defaultTheme.fontFamily.sans],
+        mono:['Anonymous Pro', defaultTheme.fontFamily.mono],
       },
       animation: {
         'spin-slow': 'spin 2s linear infinite',
