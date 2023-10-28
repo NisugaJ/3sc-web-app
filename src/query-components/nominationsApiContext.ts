@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { QueryKey, UseQueryOptions } from "@tanstack/react-query";
 import { QueryOperation } from "./nominationsApiComponents";
 
@@ -36,6 +38,7 @@ export function useNominationsApiContext<
   TData = TQueryFnData,
   TQueryKey extends QueryKey = QueryKey
 >(
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _queryOptions?: Omit<
     UseQueryOptions<TQueryFnData, TError, TData, TQueryKey>,
     "queryKey" | "queryFn"
