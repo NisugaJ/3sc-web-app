@@ -17,6 +17,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@openapi-codegen/cli": "^2.0.0",
+    "@openapi-codegen/typescript": "^7.0.1",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
