@@ -9,3 +9,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+@layer components {
+  .xy-center-children {
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+  }
+}
