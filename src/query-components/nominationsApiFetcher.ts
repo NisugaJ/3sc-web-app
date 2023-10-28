@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import { NominationsApiContext } from "./nominationsApiContext";
 
 const baseUrl = "https://cube-academy-api.cubeapis.com";
