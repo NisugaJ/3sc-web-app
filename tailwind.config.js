@@ -27,6 +27,6 @@ export default {
   daisyui:{
     themes: false,
     base: false,
-    styled: false,
+    styled: true,
   }
 }
