@@ -1,6 +1,6 @@
 import { useCubeAcademyRetrieveNomineeList } from "../../query-components/nominationsApiComponents";
 import { getAuthTokenFromEnv } from "../../utils/auth";
-import AppSelectInputField from "../atoms/AppSelectInputField";
+import AppInputElement from "../atoms/AppInputElement";
 import AppLoadingSpinner from "../atoms/AppLoadingSpinner";
 
 const NomineeListDropDown = () => {
@@ -11,6 +11,9 @@ const NomineeListDropDown = () => {
             'Authorization': `Bearer ${getAuthTokenFromEnv()}`
         }
     });
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const options = data?.data?.map((row: any) => { return { label: `${row.first_name} ${row.last_name}`, value: row.nominee_id.toString() } })
 
     if (error) {
         return (
@@ -26,16 +29,13 @@ const NomineeListDropDown = () => {
     }
     
     return (
-        <AppSelectInputField 
-            name="nominee" 
-            id="nominee" 
-            onChange={() => { console.log('option changed') }} 
-            options={
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                data?.data?.map((row: any) => { return { label: `${row.first_name} ${row.last_name}`, value: row.nominee_id.toString() } })
-            } 
+        <AppInputElement 
+            type="select" 
+            labelText="Nominee" 
+            // bottomLeftLabel='' 
+            placeholder='Select a nominee' 
+            otherField={{'options': options}}
         />
-
     )
 }
 
