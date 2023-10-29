@@ -4,6 +4,7 @@ import './App.css'
 import AppPrimaryButton from './elements/atoms/AppPrimaryButton'
 import AppSecondaryButton from './elements/atoms/AppSecondaryButton'
 import NomineeListDropDown from './elements/molecules/NomineeListDropDown';
+import { AppButtonStates } from './ts-types/AppButtonProps';
 
 function App() {
   const queryClient: QueryClient = new QueryClient();
@@ -13,7 +14,7 @@ function App() {
       <div className="h-screen mx-0 my-0 xy-center-children space-x-4 space-y-5 flex-col">
         <NomineeListDropDown/>
         <div className='space-y-3 '>
-          <AppPrimaryButton> Submit</AppPrimaryButton>
+          <AppPrimaryButton variant={AppButtonStates.inactive}> Submit</AppPrimaryButton>
           <AppSecondaryButton>Cancel</AppSecondaryButton>
         </div>
       </div>

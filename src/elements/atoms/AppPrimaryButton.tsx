@@ -8,11 +8,11 @@ import { colors } from "../../colors"
 const AppPrimaryButton = (props: AppButtonProps) => {
     return (
         <AppButton 
-            className={
+            additionalClassNames={
                 classNames(
-                "bg-black-primary text-white-primary hover:bg-white-primary hover:text-black-primary hover:outline hover:outline-2",
-
-                { 'bg-gray': props.variant === AppButtonStates.inactive}
+                    "bg-black-primary text-white-primary hover:bg-white-primary hover:text-black-primary hover:outline hover:outline-2",
+                    { 'btn-disabled bg-gray': props.variant === AppButtonStates.inactive},
+                    props.additionalClassNames
                 )
             }
             {...props}

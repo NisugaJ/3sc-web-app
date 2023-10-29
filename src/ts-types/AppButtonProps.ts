@@ -8,7 +8,6 @@ export enum AppButtonStates {
 }
 
 interface AppButtonProps extends Props {
-    onClick?: void
     variant?: AppButtonStates | AppButtonStates.active
   }
   

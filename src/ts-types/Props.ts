@@ -1,7 +1,6 @@
 interface Props {
-  /** The text to display inside the button */
   children?: React.ReactNode;
-  className?: string
+  additionalClassNames?: string
 }
 
 export default Props
