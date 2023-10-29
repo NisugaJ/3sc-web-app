@@ -12,19 +12,22 @@ export default {
   theme: {
     colors: colors,
     extend: {
-      fontFamily:{
-        sans:['Poppins', defaultTheme.fontFamily.sans],
-        mono:['Anonymous Pro', defaultTheme.fontFamily.mono],
+      fontFamily: {
+        sans: ['Poppins', defaultTheme.fontFamily.sans],
+        mono: ['Anonymous Pro', defaultTheme.fontFamily.mono],
       },
       animation: {
         'spin-slow': 'spin 2s linear infinite',
+      },
+      screens: {
+        'zero': '0px',
       }
-    }
+    },
   },
 
   plugins: [daisyui],
 
-  daisyui:{
+  daisyui: {
     themes: false,
     base: true,
     styled: true,
