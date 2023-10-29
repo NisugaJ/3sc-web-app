@@ -11,6 +11,8 @@
 }
 
 @layer components {
+
+  /* Center children along the x and y axis */
   .xy-center-children {
     @apply flex;
     @apply justify-center;
