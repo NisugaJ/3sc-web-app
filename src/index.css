@@ -10,6 +10,13 @@
   -webkit-text-size-adjust: 100%;
 }
 
+@layer base {
+  * {
+    display: border-box;
+    @apply rounded-none !important;
+  }
+}
+
 @layer components {
 
   /* Center children along the x and y axis */
