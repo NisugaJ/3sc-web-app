@@ -26,7 +26,7 @@ export default {
 
   daisyui:{
     themes: false,
-    base: false,
+    base: true,
     styled: true,
   }
 }
