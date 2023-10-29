@@ -16,9 +16,7 @@
     @apply justify-center;
     @apply items-center;
   }
-}
 
-@layer components {
   ::-webkit-scrollbar {
     width: 10px;
     background-color: theme(colors.gray.light);
