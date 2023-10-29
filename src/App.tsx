@@ -4,7 +4,8 @@ import './App.css'
 import AppPrimaryButton from './elements/atoms/AppPrimaryButton'
 import AppSecondaryButton from './elements/atoms/AppSecondaryButton'
 import NomineeListDropDown from './elements/molecules/NomineeListDropDown';
-import { AppButtonStates } from './ts-types/AppButtonProps';
+// import { AppButtonStates } from './ts-types/AppButtonProps';
+import AppInputElement from './elements/atoms/AppInputElement';
 
 function App() {
   const queryClient: QueryClient = new QueryClient();
@@ -12,9 +13,10 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="h-screen mx-0 my-0 xy-center-children space-x-4 space-y-5 flex-col">
-        <NomineeListDropDown/>
         <div className='space-y-3 '>
-          <AppPrimaryButton variant={AppButtonStates.inactive}> Submit</AppPrimaryButton>
+          <NomineeListDropDown/>
+          <AppInputElement type="textarea" labelText="Reason" bottomLeftLabel='Max. 300 words' placeholder='Enter reason'/>
+          <AppPrimaryButton> Submit</AppPrimaryButton>
           <AppSecondaryButton>Cancel</AppSecondaryButton>
         </div>
       </div>
