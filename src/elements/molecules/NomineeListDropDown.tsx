@@ -1,5 +1,6 @@
 import { useCubeAcademyRetrieveNomineeList } from "../../query-components/nominationsApiComponents";
 import { getAuthTokenFromEnv } from "../../utils/auth";
+import AppSelectInputField from "../atoms/AppSelectInputField";
 import LoadingSpinner from "../atoms/LoadingSpinner";
 
 const NomineeListDropDown = () => {
@@ -21,25 +22,20 @@ const NomineeListDropDown = () => {
     }
 
     if (isLoading) {
-        console.log(import.meta.env.VITA_BEARER_AUTH_TOKEN);
-        
         return <LoadingSpinner/>
     }
     
     return (
-        <select className="select select-bordered w-auto  rounded-none">
-            {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            data?.data?.map((row: any) => {
-                return (
-                    <option>
-                        {row.first_name} &nbsp;        
-                        {row.last_name}
-                    </option>
-                )
-            })
-            }
-        </select>
+        <AppSelectInputField 
+            name="nominee" 
+            id="nominee" 
+            onChange={() => { console.log('option changed') }} 
+            options={
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                data?.data?.map((row: any) => { return { label: `${row.first_name} ${row.last_name}`, value: row.nominee_id.toString() } })
+            } 
+        />
+
     )
 }
 
