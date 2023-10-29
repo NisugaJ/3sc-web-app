@@ -1,7 +1,7 @@
 import { useCubeAcademyRetrieveNomineeList } from "../../query-components/nominationsApiComponents";
 import { getAuthTokenFromEnv } from "../../utils/auth";
 import AppSelectInputField from "../atoms/AppSelectInputField";
-import LoadingSpinner from "../atoms/LoadingSpinner";
+import AppLoadingSpinner from "../atoms/AppLoadingSpinner";
 
 const NomineeListDropDown = () => {
 
@@ -22,7 +22,7 @@ const NomineeListDropDown = () => {
     }
 
     if (isLoading) {
-        return <LoadingSpinner/>
+        return <AppLoadingSpinner/>
     }
     
     return (

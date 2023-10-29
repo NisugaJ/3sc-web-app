@@ -2,7 +2,7 @@ import classNames from "classnames"
 
 import AppButtonProps, { AppButtonStates } from "../../ts-types/AppButtonProps"
 import AppButton from "./AppButton"
-import LoadingSpinner from "./LoadingSpinner"
+import AppLoadingSpinner from "./AppLoadingSpinner"
 import { colors } from "../../colors"
 
 const AppPrimaryButton = (props: AppButtonProps) => {
@@ -19,7 +19,7 @@ const AppPrimaryButton = (props: AppButtonProps) => {
         >
         { 
             props.variant==='loading'?
-            <LoadingSpinner color={colors["white-primary"]}/>
+            <AppLoadingSpinner color={colors["white-primary"]}/>
         :
             props.children
         }

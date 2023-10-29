@@ -1,7 +1,7 @@
 import { colors } from "../../colors"
 import LoadingSpinnerProps from "../../ts-types/LoadingSpinnerProps"
 
- const LoadingSpinner = (props: LoadingSpinnerProps) =>{
+ const AppLoadingSpinner = (props: LoadingSpinnerProps) =>{
     const color = props.color ? props.color : colors["black-primary"]
 
     return (
@@ -19,4 +19,4 @@ import LoadingSpinnerProps from "../../ts-types/LoadingSpinnerProps"
     ) 
 }
 
-export default LoadingSpinner
+export default AppLoadingSpinner
