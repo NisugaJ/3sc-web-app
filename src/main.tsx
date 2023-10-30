@@ -10,12 +10,13 @@ import './index.css'
 import AppHeader from './elements/organisms/AppHeader.tsx';
 import AppFooter from './elements/organisms/AppFooter.tsx';
 import AppErrorPage from './elements/pages/AppErrorPage.tsx';
+import ContentContainer from './elements/templates/ContentContainer.tsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    errorElement:<AppErrorPage />,
+    errorElement: <AppErrorPage />,
   },
 ]);
 
@@ -26,9 +27,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <QueryClientProvider client={queryClient}>
       <div className="h-screen mx-0 my-0">
         <AppHeader />
-          <div className='px-5 py-0'>
-          <RouterProvider router={router}/>
-          </div>
+          <ContentContainer>
+            <RouterProvider router={router} />
+          </ContentContainer>
         <AppFooter />
       </div>
     </QueryClientProvider>

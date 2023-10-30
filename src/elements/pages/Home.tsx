@@ -7,10 +7,10 @@ import AppInputElement from '../atoms/AppInputElement';
 function Home() {
 
   return (
-      <div className="h-screen mx-0 my-0 xy-center-children space-x-4 space-y-5 flex-col">
+      <div className=" xy-center-children space-x-4 space-y-5 flex-col">
         <div className='space-y-3 '>
-          <NomineeListDropDown/>
-          <AppInputElement type="textarea" labelText="Reason" bottomLeftLabel='Max. 300 words' placeholder='Enter reason'/>
+          <NomineeListDropDown />
+          <AppInputElement type="textarea" labelText="Reason" bottomLeftLabel='Max. 300 words' placeholder='Enter reason' />
           <AppPrimaryButton> Submit</AppPrimaryButton>
           <AppSecondaryButton>Cancel</AppSecondaryButton>
         </div>
