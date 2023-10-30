@@ -39,7 +39,7 @@
 
   /* Content container styles */
   .content-container{
-    background: url("/assets/images/app-bg/app-bg.png"),  theme(colors.gradient-primary);
+    background: url("/public/assets/images/app-bg/app-bg.png"),  theme(colors.gradient-primary);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
