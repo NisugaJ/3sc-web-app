@@ -26,12 +26,22 @@
     @apply items-center;
   }
 
+  /* Scroll bar styles */
   ::-webkit-scrollbar {
-    width: 10px;
-    background-color: theme(colors.gray.light);
+    width: 5px;
+    background-color: theme(colors.gray.dark);
   }
   
   ::-webkit-scrollbar-thumb {
-    background: theme(colors.black-primary);
+    background: theme(colors.pink-primary);
+  }
+  /* Scroll bar styles */
+
+  /* Content container styles */
+  .content-container{
+    background: url("./assets/images/app-bg/app-bg.png"),  theme(colors.gradient-primary);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
