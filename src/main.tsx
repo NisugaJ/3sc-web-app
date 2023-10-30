@@ -22,7 +22,6 @@ const router = createBrowserRouter([
   {
     path: "/submit-nomination",
     element: <AppSubmitNominationPage />,
-    errorElement: <AppErrorPage />,
   }
 ]);
 
