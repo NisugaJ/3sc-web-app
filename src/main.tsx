@@ -11,6 +11,7 @@ import AppHeader from './elements/organisms/AppHeader.tsx';
 import AppFooter from './elements/organisms/AppFooter.tsx';
 import AppErrorPage from './elements/pages/AppErrorPage.tsx';
 import ContentContainer from './elements/templates/ContentContainer.tsx';
+import AppSubmitNominationPage from './elements/pages/AppSubmitNominationPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
     element: <Home />,
     errorElement: <AppErrorPage />,
   },
+  {
+    path: "/submit-nomination",
+    element: <AppSubmitNominationPage />,
+    errorElement: <AppErrorPage />,
+  }
 ]);
 
 const queryClient: QueryClient = new QueryClient();

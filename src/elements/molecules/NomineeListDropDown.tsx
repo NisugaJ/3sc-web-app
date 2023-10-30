@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCubeAcademyRetrieveNomineeList } from "../../query-components/nominationsApiComponents";
 import { getAuthTokenFromEnv } from "../../utils/auth";
 import AppInputElement from "../atoms/AppInputElement";
@@ -37,6 +38,7 @@ const NomineeListDropDown = () => {
             // bottomLeftLabel='' 
             placeholder='Select a nominee'
             otherField={{ 'options': options }}
+            additionalClassNames="max-w-xs"
         />
     )
 }
