@@ -4,13 +4,13 @@ import AppSelectInputField from "./AppSelectInputField"
 
 const AppInputElement = (props:  AppInputElementProps) => {
 
-    const {additionalClassNames, ...otherProps}: AppInputElementProps = props
+    const {additionalClassNames,labelText,topRightLabel,bottomLeftLabel,bottomRightLabel, ...otherProps}: AppInputElementProps = props
 
     return (
         <div className="form-control w-full max-w-xs">
             <label className="label pl-0">
-                <span className="label-text font-bold text-base">{props.labelText}</span>
-                <span className="label-text-alt">{props.topRightLabel}</span>
+                <span className="label-text font-bold text-base">{labelText}</span>
+                <span className="label-text-alt">{topRightLabel}</span>
             </label>
             {
                 props.type === "select" ?
@@ -22,8 +22,8 @@ const AppInputElement = (props:  AppInputElementProps) => {
                     <input className={classNames("input input-bordered border-gray w-full max-w-md text-base font-mono", additionalClassNames) } {...otherProps} />
             }
             <label className="label pl-0">
-                <span className="label-text-alt">{props.bottomLeftLabel}</span>
-                <span className="label-text-alt">{props.bottomRightLabel}</span>
+                <span className="label-text-alt">{bottomLeftLabel}</span>
+                <span className="label-text-alt">{bottomRightLabel}</span>
             </label>
         </div>
     )
