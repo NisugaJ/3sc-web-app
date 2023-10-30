@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import { useCubeAcademyGetAllNominations } from "../../query-components/nominationsApiComponents"
 import { getAuthTokenFromEnv } from "../../utils/auth"
 
@@ -28,7 +29,14 @@ const AppHeader = () => {
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a href="/nominations" className="text-white-primary underline font-mono font-bold">Your nominations ({nominationCount})</a></li>
+                    <li>
+                        <NavLink
+                            to="/nominations"
+                            className="text-white-primary underline font-mono font-bold"
+                        >
+                            Your nominations ({nominationCount})
+                        </NavLink>
+                    </li>
                     <li>
                         <details>
                             <summary className="text-white-primary font-mono font-bold ">
