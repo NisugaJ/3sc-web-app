@@ -25,16 +25,18 @@ const NomineeListDropDown = () => {
     }
 
     if (isLoading) {
-        return <AppLoadingSpinner/>
+        return (
+            <AppLoadingSpinner/> 
+        )
     }
-    
+
     return (
-        <AppInputElement 
-            type="select" 
-            labelText="Nominee" 
+        <AppInputElement
+            type="select"
+            labelText="Nominee"
             // bottomLeftLabel='' 
-            placeholder='Select a nominee' 
-            otherField={{'options': options}}
+            placeholder='Select a nominee'
+            otherField={{ 'options': options }}
         />
     )
 }
