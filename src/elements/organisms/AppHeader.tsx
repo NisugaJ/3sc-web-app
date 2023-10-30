@@ -1,5 +1,4 @@
 import { useCubeAcademyGetAllNominations } from "../../query-components/nominationsApiComponents"
-import AppLoadingSpinner from "../atoms/AppLoadingSpinner"
 import { getAuthTokenFromEnv } from "../../utils/auth"
 
 const AppHeader = () => {
@@ -12,19 +11,12 @@ const AppHeader = () => {
     const nominationCount = data?.data?.length as number | undefined | 0
 
     if (error) {
-        return (
-            <div>
-                <h3>{error.status}</h3>
-                <p>{error.payload}</p>
-            </div>
-        )
+        console.error(error);
     }
 
     if (isLoading) {
-        return <AppLoadingSpinner/>
+        console.error('Waiting for useCubeAcademyGetAllNominations...');
     }
-
-   
 
     return (
         <div className="navbar  h-[72px] bg-black-primary">

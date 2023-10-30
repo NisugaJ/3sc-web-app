@@ -1,47 +1,48 @@
 const AppFooter = () => {
     return (
         <div className="px-5 bg-black-primary">
-            <footer className="footer px-10 py-4 border-b-2  text-base-content ">
-                <aside className="items-center grid-flow-col">
+            <footer className="footer px-10   text-base-content ">
+                <div className="py-4 border-b-2 w-full">
+                <aside className="items-center grid-flow-col  ">
                     <img className="text-pink-primary zero:max-md:hidden" src="assets/images/header-logo/header-logo.svg" alt="" />
                 </aside>
-
+                </div>
             </footer>
             <footer className="footer p-10  text-base-content">
                 <nav>
                     <header className="text-[12px]  text-white-primary font-bold uppercase">Bournemouth</header>
-                    <p className="font-mono text-[12px] text-white-primary">
+                    <p className="font-mono text-[12px] text-white-primary leading-snug">
                         Telephone House
 
                     </p>
-                    <p className="font-mono text-[12px] text-white-primary">
+                    <p className="font-mono text-[12px] text-white-primary leading-tight">
                         Bournemouth, BH1 3NE
                     </p>
                 </nav>
                 <nav>
                     <header className="text-[12px]  text-white-primary font-bold uppercase">London</header>
-                    <p className="font-mono text-[12px] text-white-primary">
+                    <p className="font-mono text-[12px] text-white-primary leading-tight">
                         51 Eastcheap
                     </p>
-                    <p className="font-mono text-[12px] text-white-primary">
+                    <p className="font-mono text-[12px] text-white-primary leading-tight">
                         London, EC3M 1JP
                     </p>
                 </nav>
                 <nav>
                     <header className="text-[12px]  text-white-primary font-bold uppercase">Washington</header>
-                    <p className="font-mono text-[12px] text-white-primary">
+                    <p className="font-mono text-[12px] text-white-primary leading-tight">
                         80 M Street SE
                     </p>
-                    <p className="font-mono text-[12px] text-white-primary">
+                    <p className="font-mono text-[12px] text-white-primary leading-tight">
                         Washington, D.C 20003
                     </p>
                 </nav>
                 <nav>
                     <header className="text-[12px]  text-white-primary font-bold uppercase">Florida</header>
-                    <p className="font-mono text-[12px] text-white-primary">
+                    <p className="font-mono text-[12px] text-white-primary leading-tight">
                         7901 4th St N, STE 300
                     </p>
-                    <p className="font-mono text-[12px] text-white-primary">
+                    <p className="font-mono text-[12px] text-white-primary leading-tight">
                         St. Petersburg FL 33702
                     </p>
                 </nav>
