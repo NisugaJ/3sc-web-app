@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCubeAcademyRetrieveNomineeList } from "../../query-components/nominationsApiComponents";
 import { getAuthTokenFromEnv } from "../../utils/auth";
-import AppInputElement from "../atoms/AppInputElement";
 import AppLoadingSpinner from "../atoms/AppLoadingSpinner";
+import AppSelectInputField from "../atoms/AppSelectInputField";
 
-const NomineeListDropDown = () => {
+const NomineeListDropDown = (props: any) => {
 
     const { data, error, isLoading } = useCubeAcademyRetrieveNomineeList({
         headers: {
@@ -32,14 +32,7 @@ const NomineeListDropDown = () => {
     }
 
     return (
-        <AppInputElement
-            type="select"
-            labelText="Nominee"
-            // bottomLeftLabel='' 
-            placeholder='Select a nominee'
-            otherField={{ 'options': options }}
-            additionalClassNames="max-w-xs"
-        />
+        <AppSelectInputField  options={options}  {...props} onChange={props.onChange}/>
     )
 }
 
