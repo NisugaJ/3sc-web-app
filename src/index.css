@@ -10,10 +10,24 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.app-progress-bar {
+  background-color: theme(colors.gray.light);
+}
+
 @layer base {
   * {
     display: border-box;
     @apply rounded-none !important;
+  }
+
+  progress, progress::-webkit-progress-bar, progress::-moz-progress-bar  {
+    @apply app-progress-bar;
+  }
+  progress::-webkit-progress-value {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: theme(colors.pink-primary);
+    border-radius: 0px;
   }
 }
 
