@@ -48,6 +48,7 @@ const AppSelectInputField = (props: Props) => {
                 color:state.isSelected ? colors["pink-primary"] : colors["black-primary"],
             })
             }}
+            onChange={props.onChange}
             {...props} 
         />
     )
