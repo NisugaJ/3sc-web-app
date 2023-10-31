@@ -1,9 +1,10 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useSubmitNominationStore } from '../../../client-state/stores';
 import NomineeListDropDown from '../../molecules/NomineeListDropDown';
 import AppInputContainer from '../../templates/AppInputContainer';
 
 
-const SubmitNominationStepOne = (props: any) => {
+const SubmitNominationStepOne = () => {
+    const state = useSubmitNominationStore()
 
     return (
         <AppInputContainer
@@ -11,7 +12,7 @@ const SubmitNominationStepOne = (props: any) => {
             placeholder='Select a nominee'
             className="max-w-xs"
         >
-            <NomineeListDropDown onChange={(selectedOption: { label: string, value: string }) => props.state.updateSelectedNomineeName(selectedOption.label.split(' ')[0])} />
+            <NomineeListDropDown onChange={(selectedOption: { label: string, value: string }) => state.updateSelectedNomineeName(selectedOption.label.split(' ')[0])} />
         </AppInputContainer>
     )
 }

@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import AppPrimaryButton from '../../atoms/AppPrimaryButton'
-import NomineeListDropDown from '../../molecules/NomineeListDropDown';
 import PageContainer from '../../templates/AppPageContainer';
 import { useSubmitNominationStore } from '../../../client-state/stores';
 import AppInputContainer from '../../templates/AppInputContainer';
 import AppTextAreaInputField from '../../atoms/AppTextAreaInputField';
+import SubmitNominationStepOne from './SubmitNominationStepOne';
 
 
 function AppSubmitNominationPage() {
@@ -27,13 +27,14 @@ function AppSubmitNominationPage() {
               <p>Please select a cube who you feel has done something honourable this month or just all round has a great work ethic.</p>
               <form action="" className='py-2'>
 
-                
+                <SubmitNominationStepOne/>
+
                 <div className="divider py-5" />
                 <span className="label-text font-bold text-base">I’d like to nominate <span className="text-pink-primary">{state.selectedNomineeName}</span> because...</span>
                 <p>Please let us know why you think this cube deserves the ‘cube of the month’ title 🏆⭐</p>
 
                 <AppInputContainer
-                  labelText={<span> <span className="text-pink-primary font-bold">* </span>Reasoning</span>} placeholder='Enter reason'>
+                  labelText={<span> <span className="text-pink-primary font-bold">* </span>Reasoning</span>} placeholder='Enter reason'>``
                   <AppTextAreaInputField />
                 </AppInputContainer>
                 <AppPrimaryButton>Get Started</AppPrimaryButton>        
