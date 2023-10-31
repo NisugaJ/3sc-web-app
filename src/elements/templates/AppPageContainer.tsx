@@ -2,17 +2,17 @@
 
 import AppFooter from "../organisms/AppFooter";
 import AppHeader from "../organisms/AppHeader";
-import ContentContainer from "./ContentContainer";
+import AppContentContainer from "./AppContentContainer";
 
-function PageContainer(props: any) {
+function AppPageContainer(props: any) {
 
   return (
     <>
       <AppHeader {...props}/>
-        <ContentContainer {...props}/>
+        <AppContentContainer {...props}/>
       <AppFooter {...props}/>
     </>
   )
 }
 
-export default PageContainer
+export default AppPageContainer

@@ -5,15 +5,15 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import Home from './elements/pages/Home.tsx';
+import HomePage from './elements/pages/HomePage.tsx';
 import './index.css'
 import AppErrorPage from './elements/pages/AppErrorPage.tsx';
-import AppSubmitNominationPage from './elements/pages/AppSubmitNominationPage.tsx';
+import AppSubmitNominationPage from './elements/pages/submit-nomination/AppSubmitNominationPage.tsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <HomePage />,
     errorElement: <AppErrorPage />,
   },
   {

@@ -6,12 +6,12 @@
 
 import AppPrimaryButton from "../atoms/AppPrimaryButton"
 import { NavLink } from "react-router-dom";
-import PageContainer from "../templates/PageContainer";
+import AppPageContainer from "../templates/AppPageContainer";
 
 function Home() {
 
   return (
-    <PageContainer>
+    <AppPageContainer>
       <div className=" xy-center-children space-x-4 space-y-5 flex-col">
         <div className='space-y-3 '>
           {/* <NomineeListDropDown />
@@ -25,9 +25,7 @@ function Home() {
                 <h1 className="text-[32px] font-bold uppercase text-center">Cube of the month - Nominations</h1>
                 <p className="py-2 text-center font-mono">At cube we’re passionate about recognising the great work that our cubes do. Each month one of our cubes are crowned cube of the month 👑⭐. Please nominate who you think deserves this months title.</p>
 
-                <NavLink
-                  to="/submit-nomination"
-                >
+                <NavLink to="/submit-nomination">
                   <AppPrimaryButton >
                     Get Started
                   </AppPrimaryButton>
@@ -37,7 +35,7 @@ function Home() {
           </div>
         </div>
       </div>
-    </PageContainer>
+    </AppPageContainer>
   )
 }
 

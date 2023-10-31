@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-function ContentContainer(props: any) {
+function AppContentContainer(props: any) {
 
   return (
       <div className="min-h-[95vh] w-full py-10 px-4 content-container">
@@ -11,4 +11,4 @@ function ContentContainer(props: any) {
   )
 }
 
-export default ContentContainer
+export default AppContentContainer
