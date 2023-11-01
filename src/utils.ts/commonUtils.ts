@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import ProcessTypes from "../ts-types/enums/ProcessTypes";
 
 const formatProcessTypeForDisplay = (process: ProcessTypes | string | undefined) => {
@@ -23,7 +24,12 @@ const isClosingDateInThePast = (closingDate: string | undefined) => {
   return new Date(closingDate) < new Date();
 }
 
+const useQueryParams = () => {
+  return new URLSearchParams(useLocation().search);
+}
+
 export {
     formatProcessTypeForDisplay,
-    isClosingDateInThePast
+    isClosingDateInThePast,
+    useQueryParams
 }

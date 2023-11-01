@@ -4,7 +4,7 @@ const AppFooter = () => {
             <footer className="footer px-10   text-base-content ">
                 <div className="py-4 border-b-2 w-full">
                 <aside className="items-center grid-flow-col  ">
-                    <img className="text-pink-primary zero:max-md:hidden" src="assets/images/header-logo/header-logo.svg" alt="" />
+                    <img className="text-pink-primary zero:max-md:hidden" src="/assets/images/header-logo/header-logo.svg" alt="" />
                 </aside>
                 </div>
             </footer>

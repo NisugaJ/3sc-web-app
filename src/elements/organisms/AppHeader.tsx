@@ -23,8 +23,8 @@ const AppHeader = () => {
         <div className="navbar  h-[72px] bg-black-primary">
             <div className="flex-1">
                 <a className="btn btn-ghost normal-case text-xl" href="/">
-                    <img className="text-pink-primary zero:max-md:hidden" src="assets/images/header-logo/header-logo.svg" alt="" />
-                    <img className="text-pink-primary md:max-2xl:hidden" src="assets/images/header-logo/header-logo-only.svg" alt="" />
+                    <img className="text-pink-primary zero:max-md:hidden" src="/assets/images/header-logo/header-logo.svg" alt="" />
+                    <img className="text-pink-primary md:max-2xl:hidden" src="/assets/images/header-logo/header-logo-only.svg" alt="" />
                 </a>
             </div>
             <div className="flex-none">

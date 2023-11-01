@@ -1,11 +1,12 @@
-import AppPrimaryButton from "../../atoms/AppPrimaryButton";
-import AppSecondaryButton from "../../atoms/AppSecondaryButton";
 import PageContainer from "../../templates/AppPageContainer";
 import SubmitNominationStepOne from "./SubmitNominationStepOne";
 import SubmitNominationStepThree from "./SubmitNominationStepThree";
 import SubmitNominationStepTwo from "./SubmitNominationStepTwo";
+import { useQueryParams } from "../../../utils.ts/commonUtils";
 
 function AppSubmitNominationPage() {
+  const queryParams = useQueryParams();
+
   return (
     <PageContainer>
       <div className=" xy-center-children space-x-4 space-y-5 flex-col">
@@ -19,18 +20,16 @@ function AppSubmitNominationPage() {
               value={20}
               max="100"
             ></progress>
-            <img src="assets/images/submit-nomination-image.png" alt="" />
+            <img src="/assets/images/submit-nomination-image.png" alt="" />
             <div className="bg-white-primary py-5">
-              <form action="" className="py-2">
-                <SubmitNominationStepOne />
-
-                <SubmitNominationStepTwo />
-
-                <SubmitNominationStepThree />
-
-                <AppPrimaryButton> Next</AppPrimaryButton>
-                <AppSecondaryButton>Cancel</AppSecondaryButton>
-              </form>
+              
+            {
+              queryParams.get('step') === '1' && <SubmitNominationStepOne />
+              ||
+              queryParams.get('step') === '2' && <SubmitNominationStepTwo />
+              ||
+              queryParams.get('step') === '3' && <SubmitNominationStepThree />
+            }
             </div>
           </div>
         </div>

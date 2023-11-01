@@ -2,8 +2,12 @@ import { useEffect, useState } from "react";
 import { useSubmitNominationStore } from "../../../client-state/stores";
 import ProcessTypes from "../../../ts-types/enums/ProcessTypes";
 import classNames from "classnames";
+import AppPrimaryButton from "../../atoms/AppPrimaryButton";
+import AppSecondaryButton from "../../atoms/AppSecondaryButton";
+import { useNavigate } from "react-router-dom";
 
 const SubmitNominationStepThree = () => {
+  const navigate = useNavigate();
   const ratingName = "process";
   const state = useSubmitNominationStore();
   const [processScale, setProcessScale] = useState(0);
@@ -71,7 +75,7 @@ const SubmitNominationStepThree = () => {
               )}
               onClick={() => updateProcess(ProcessTypes.very_unfair)}
             >
-              <img src="assets/images/submit-nomination/process-icons/very-unfair.svg" />
+              <img src="/assets/images/submit-nomination/process-icons/very-unfair.svg" />
             </div>
             <span className="font-mono">Very unfair</span>
           </div>
@@ -86,7 +90,7 @@ const SubmitNominationStepThree = () => {
               )}
               onClick={() => updateProcess(ProcessTypes.unfair)}
             >
-              <img src="assets/images/submit-nomination/process-icons/unfair.svg" />
+              <img src="/assets/images/submit-nomination/process-icons/unfair.svg" />
             </div>
             <span className="font-mono">Unfair</span>
           </div>
@@ -101,7 +105,7 @@ const SubmitNominationStepThree = () => {
               )}
               onClick={() => updateProcess(ProcessTypes.not_sure)}
             >
-              <img src="assets/images/submit-nomination/process-icons/not-sure.svg" />
+              <img src="/assets/images/submit-nomination/process-icons/not-sure.svg" />
             </div>
             <span className="font-mono">Not sure</span>
           </div>
@@ -116,7 +120,7 @@ const SubmitNominationStepThree = () => {
               )}
               onClick={() => updateProcess(ProcessTypes.fair)}
             >
-              <img src="assets/images/submit-nomination/process-icons/fair.svg" />
+              <img src="/assets/images/submit-nomination/process-icons/fair.svg" />
             </div>
             <span className="font-mono">Fair</span>
           </div>
@@ -131,11 +135,23 @@ const SubmitNominationStepThree = () => {
               )}
               onClick={() => updateProcess(ProcessTypes.very_fair)}
             >
-              <img src="assets/images/submit-nomination/process-icons/very-fair.svg" />
+              <img src="/assets/images/submit-nomination/process-icons/very-fair.svg" />
             </div>
             <span className="font-mono">Very fair</span>
           </div>
         </div>
+      </div>
+      <div className="pt-3 xy-center-children justify-between">
+        <AppSecondaryButton
+          onClick={() => {
+            navigate("/submit-nomination?step=2");
+          }}
+        >
+          Back
+        </AppSecondaryButton>
+        <AppPrimaryButton onClick={() => navigate("/submit-nomination?step=4")}>
+          Next
+        </AppPrimaryButton>
       </div>
     </div>
   );

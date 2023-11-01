@@ -19,13 +19,13 @@ function Home() {
             <AppPrimaryButton> Submit</AppPrimaryButton>
             <AppSecondaryButton>Cancel</AppSecondaryButton> */}
           <div className="max-w-3xl">
-            <img src="assets/images/intro-image.png" alt="" />
+            <img src="/assets/images/intro-image.png" alt="" />
             <div className="hero bg-white-primary">
               <div className="hero-content flex-col px-16 py-7">
                 <h1 className="text-[32px] font-bold uppercase text-center">Cube of the month - Nominations</h1>
                 <p className="py-2 text-center font-mono">At cube we’re passionate about recognising the great work that our cubes do. Each month one of our cubes are crowned cube of the month 👑⭐. Please nominate who you think deserves this months title.</p>
 
-                <NavLink to="/submit-nomination">
+                <NavLink to="/submit-nomination?step=1">
                   <AppPrimaryButton >
                     Get Started
                   </AppPrimaryButton>
