@@ -118,6 +118,6 @@
     background: linear-gradient(121deg, theme(colors.green-primary) 0%,  theme(colors.green-secondary) 86.11%);
   }
   .content-container {
-      background: no-repeat right/125% url("/public/assets/images/app-bg/app-bg.png");
+      background: no-repeat -250px 5px / 112% url("/public/assets/images/app-bg/app-bg.png");
   }
 }
