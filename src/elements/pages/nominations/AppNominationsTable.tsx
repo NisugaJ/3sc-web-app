@@ -3,7 +3,10 @@ import {
   useCubeAcademyGetAllNominations,
   useCubeAcademyRetrieveNomineeList,
 } from "../../../query-components/nominationsApiComponents";
-import { formatProcessTypeForDisplay } from "../../../utils.ts/commonUtils";
+import {
+  formatProcessTypeForDisplay,
+  isClosingDateInThePast,
+} from "../../../utils.ts/commonUtils";
 import { getAuthTokenFromEnv } from "../../../utils/auth";
 import AppLoadingSpinner from "../../atoms/AppLoadingSpinner";
 import AppPrimaryButton from "../../atoms/AppPrimaryButton";
@@ -53,8 +56,9 @@ const AppNominationsTable = (props: {
 
   return (
     <div className="overflow-x-auto xy-center-children  py-5">
-      <table className="table ">
-        <thead>
+      {/* table will be displayed only if screen width is greater than 768px. If screen width is less than 768px, table will be hidden and list of nominations will be displayed. See the next element after this table element */}
+      <table className="table zero:max-md:hidden">
+        <thead className="">
           <tr className="text-black-primary uppercase">
             <th>Nominee</th>
             <th>Date Submitted</th>
@@ -71,7 +75,7 @@ const AppNominationsTable = (props: {
               ?.filter(
                 (nomination) =>
                   props.onlyClosedNominations &&
-                  +new Date() > +new Date(nomination?.closing_date as string)
+                  isClosingDateInThePast(nomination.closing_date)
               )
               .map((nomination) => (
                 <tr>
@@ -94,6 +98,46 @@ const AppNominationsTable = (props: {
               ))}
         </tbody>
       </table>
+
+      {/* if screen width is less than 768px, table will be hidden and list of nominations will be displayed here */}
+      <div className="md:max-2xl:hidden">
+        {nomineeListQuery.data?.data &&
+          data?.data
+            ?.filter(
+              (nomination) =>
+                props.onlyClosedNominations &&
+                isClosingDateInThePast(nomination.closing_date)
+            )
+            .map((nomination) => (
+              <div className="card w-full  shadow-md">
+                <div className="card-body p-[1rem]">
+                  <h2 className="card-title">
+                    {getNoimneeName(nomination.nominee_id)}
+                  </h2>
+                  <div className="xy-center-children">
+                    <div>
+                      <p className="max-w-[300px] mr-5">{nomination.reason?.slice(0, 50).concat("...")}</p>
+                    </div>
+                    <div className=" p-2  xy-center-children space-x-2 ">
+                      <AppPrimaryButton additionalClassNames="w-auto outline-none">
+                        <DeleteIcon />
+                      </AppPrimaryButton>
+                      <NavLink to={`/nomination/edit${nomination.nominee_id}`}>
+                        <EditIcon />
+                      </NavLink>
+                    </div>
+                  </div>
+                  <div className="card-actions justify-start">
+                    <p className="text-xs">
+                      {isClosingDateInThePast(nomination.closing_date)
+                        ? "Closed on " + nomination.closing_date
+                        : "Closing on " + nomination.closing_date}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+      </div>
     </div>
   );
 };

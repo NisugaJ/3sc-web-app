@@ -16,6 +16,14 @@ const formatProcessTypeForDisplay = (process: ProcessTypes | string | undefined)
   return displayText;
 };
 
+const isClosingDateInThePast = (closingDate: string | undefined) => {
+  if (closingDate === undefined) {
+    return false;
+  }
+  return new Date(closingDate) < new Date();
+}
+
 export {
-    formatProcessTypeForDisplay
+    formatProcessTypeForDisplay,
+    isClosingDateInThePast
 }

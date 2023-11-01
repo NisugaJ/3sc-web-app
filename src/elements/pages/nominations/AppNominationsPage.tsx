@@ -10,7 +10,7 @@ const AppNominationsPage = () => {
 
   return (
     <AppPageContainer>
-      <div className="mx-28 px-5 py-5 bg-white-primary">
+      <div className="mx-28 zero:max-md:mx-1 px-5 py-5 bg-white-primary">
         <span className="text-3xl uppercase font-bold">Your Nominations</span>
         <Tabs className="py-5" >
           <TabList>
