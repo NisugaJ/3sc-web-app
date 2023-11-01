@@ -14,7 +14,6 @@ export const colors = {
       'light': '#F8F8F8',
     },
   
-    'gradient-primary': 'linear-gradient(81deg, #A0FF1F 13.17%, #00ED71 86.83%)',
   
     'success': '#00ED71',
     'success-light': '#00ED7133', // last 2 numbers for 20% opacity (https://www.jmiron.com/percent-to-hex-converter)
