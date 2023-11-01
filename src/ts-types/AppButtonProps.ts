@@ -10,6 +10,8 @@ export enum AppButtonStates {
 interface AppButtonProps extends Props {
     variant?: AppButtonStates | AppButtonStates.active
     onClick?: () => void
+    type?: "button" | "submit" | "reset"
+    form?: string
   }
   
   export default AppButtonProps

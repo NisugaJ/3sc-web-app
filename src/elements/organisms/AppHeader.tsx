@@ -16,7 +16,7 @@ const AppHeader = () => {
     }
 
     if (isLoading) {
-        console.error('Waiting for useCubeAcademyGetAllNominations...');
+        console.log('Waiting for useCubeAcademyGetAllNominations...');
     }
 
     return (

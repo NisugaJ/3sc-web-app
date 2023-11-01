@@ -11,6 +11,8 @@ const SubmitNominationStepOne = () => {
 
   return (
     <>
+    <img src="/assets/images/submit-nomination-image.png" alt="" />
+            <div className="bg-white-primary py-5">
       <h1 className="text-[24px] font-bold uppercase ">
         I'd like to nominate....
       </h1>
@@ -23,15 +25,20 @@ const SubmitNominationStepOne = () => {
         labelText={
           <span>
             {" "}
-            <span className="text-pink-primary font-bold">* </span>Nominee
+            <span className="text-pink-primary font-bold ">* </span>Nominee
           </span>
         }
         placeholder="Select a nominee"
-        className="max-w-xs"
+        className="max-w-sm my-5"
       >
         <NomineeListDropDown
-          onChange={(selectedOption: { label: string; value: string }) =>
+          onChange={(selectedOption: { label: string; value: string }) =>{
             state.updateSelectedNomineeName(selectedOption.label.split(" ")[0])
+            state.updateNomination({
+              key: "nominee_id",
+              value: selectedOption.value,
+            })
+          }
           }
         />
       </AppInputContainer>
@@ -52,6 +59,7 @@ const SubmitNominationStepOne = () => {
           Next
         </AppPrimaryButton>
       </div>
+    </div>
     </>
   );
 };

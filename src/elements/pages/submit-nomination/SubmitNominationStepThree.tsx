@@ -13,7 +13,6 @@ const SubmitNominationStepThree = () => {
   const [processScale, setProcessScale] = useState(0);
 
   useEffect(() => {
-    console.log(state.nomination);
 
     switch (state.nomination.process) {
       case ProcessTypes.very_unfair:
@@ -46,6 +45,8 @@ const SubmitNominationStepThree = () => {
 
   return (
     <div>
+      <img src="/assets/images/submit-nomination-image.png" alt="" />
+            <div className="bg-white-primary py-5">
       <span className="label-text font-bold text-base">
         IS HOW WE CURRENTLY RUN CUBE OF THE MONTH FAIR?
       </span>
@@ -152,6 +153,7 @@ const SubmitNominationStepThree = () => {
         <AppPrimaryButton onClick={() => navigate("/submit-nomination?step=4")}>
           Next
         </AppPrimaryButton>
+      </div>
       </div>
     </div>
   );

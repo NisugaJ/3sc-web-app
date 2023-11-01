@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useNavigate } from "react-router-dom";
 import { useSubmitNominationStore } from "../../../client-state/stores";
 import AppPrimaryButton from "../../atoms/AppPrimaryButton";
@@ -11,6 +12,8 @@ const SubmitNominationStepTwo = () => {
 
   return (
     <>
+    <img src="/assets/images/submit-nomination-image.png" alt="" />
+            <div className="bg-white-primary py-5">
       <span className="label-text font-bold text-base">
         I’d like to nominate{" "}
         <span className="text-pink-primary">{state.selectedNomineeName}</span>{" "}
@@ -28,9 +31,15 @@ const SubmitNominationStepTwo = () => {
             <span className="text-pink-primary font-bold">* </span>Reasoning
           </span>
         }
+        className="my-5"
         placeholder="Enter reason"
       >
-        <AppTextAreaInputField />
+        <AppTextAreaInputField onChange={(event: any) =>{
+          state.updateNomination({
+            key: "reason",
+            value: event?.target?.value
+          })
+          }} />
       </AppInputContainer>
 
       <div className="pt-3 xy-center-children justify-between">
@@ -50,6 +59,7 @@ const SubmitNominationStepTwo = () => {
           Next
         </AppPrimaryButton>
       </div>
+    </div>
     </>
   );
 };
