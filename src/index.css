@@ -20,7 +20,9 @@
     @apply rounded-none !important;
   }
 
-  progress, progress::-webkit-progress-bar, progress::-moz-progress-bar  {
+  progress,
+  progress::-webkit-progress-bar,
+  progress::-moz-progress-bar {
     @apply app-progress-bar;
   }
   progress::-webkit-progress-value {
@@ -29,10 +31,71 @@
     background-color: theme(colors.pink-primary);
     border-radius: 0px;
   }
+
+  /****************   Input[type="range"] custom styles ***************** */
+  input[type="range"] {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border: 0px;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    background: #ccc;
+  }
+  
+  /* Track: Mozilla Firefox */
+  input[type="range"]::-moz-range-track {
+    height: 2px;
+    background: #362f2f;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    height: 15px;
+    width: 15px;
+    background: theme(colors.pink-primary);
+    border-radius: 50%;
+
+    box-shadow: -407px 0 0 400px theme(colors.pink-primary);
+    margin: -3px;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    height: 14px;
+    width: 14px;
+    margin: 0;
+    background-color: theme(colors.pink-primary);
+    border-radius: 50%;
+    border: 0px;
+    box-shadow: -407px 0 0 400px theme(colors.pink-primary);
+  }
+
+  input[type="range"] {
+    overflow: hidden;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    overflow: hidden;
+  }
+  
+  /* Track: Mozilla Firefox */
+  input[type="range"]::-moz-range-track {
+    overflow: hidden;
+  }
+
+  /*************************************************************** */
+
 }
 
 @layer components {
-
   /* Center children along the x and y axis */
   .xy-center-children {
     @apply flex;
@@ -45,15 +108,16 @@
     width: 5px;
     background-color: theme(colors.gray.dark);
   }
-  
+
   ::-webkit-scrollbar-thumb {
     background: theme(colors.pink-primary);
   }
   /* Scroll bar styles */
 
   /* Content container styles */
-  .content-container{
-    background: url("/public/assets/images/app-bg/app-bg.png"),  theme(colors.gradient-primary);
+  .content-container {
+    background: url("/public/assets/images/app-bg/app-bg.png"),
+      theme(colors.gradient-primary);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -20,9 +20,6 @@ const AppLoadingSpinner = (props: LoadingSpinnerProps) => {
                         <line x1="60.118" x2="82.745" y1="60.118" y2="82.745" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="16" className="colorStroke000000 svgStroke"></line>
                     </svg>
                 </div>
-                <form method="dialog" className="modal-backdrop">
-                    <button>close</button>
-                </form>
             </dialog>
         </div>
     )

@@ -28,7 +28,7 @@ export default {
   plugins: [daisyui],
 
   daisyui: {
-    themes: false,
+    themes: true,
     base: true,
     styled: true,
   }
