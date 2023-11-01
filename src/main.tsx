@@ -9,6 +9,7 @@ import HomePage from './elements/pages/HomePage.tsx';
 import './index.css'
 import AppErrorPage from './elements/pages/AppErrorPage.tsx';
 import AppSubmitNominationPage from './elements/pages/submit-nomination/AppSubmitNominationPage.tsx';
+import AppNominationsPage from './elements/pages/nominations/AppNominationsPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/submit-nomination",
     element: <AppSubmitNominationPage />,
+  },
+  {
+    path: "/nominations",
+    element: <AppNominationsPage />,
   }
 ]);
 
